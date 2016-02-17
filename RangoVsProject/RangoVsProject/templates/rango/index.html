@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rango</title>
+    </head>
+
+    <body>
+        <h1>Rango says...hello world!</h1>
+
+        {% if categories %}
+            <ul>
+                {% for category in categories %}
+                <li><a href="/rango/category/{{category.slug}}"> {{category.name}}</a> </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+
+
+        ................
+        <h3>The Top Pages, however, Are:</h3>
+        {% if topPages %}
+            <ul>
+                {% for topPage in topPages %}
+                <li><a href="{{topPage.url}}"> {{topPage.title}}</a></li>
+               {% endfor%}
+            </ul>
+        {% endif %}
+
+        <a href="/rango/add_category/">Add a New category</a><br/>
+        <a href="/rango/category/">Category</a><br/>
+        <a href="/rango/about/">About</a>
+    </body>
+</html>

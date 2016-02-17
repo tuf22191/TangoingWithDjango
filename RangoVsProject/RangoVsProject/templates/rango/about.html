@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+{% load staticfiles %}
+
+<html>
+    <head>
+        
+        
+        <title>TomaHack Homepage</title>
+        <link href="js/libs/twitter-bootstrap/css/bootstrap.css" rel="stylesheet"> <!--      Mine!-->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+        <script src="js/libs/jquery/jquery.js"></script> <!--      Mine!-->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>   
+        <!-- Bootstrap Core CSS -->
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+<!--     Custom CSS taken from online source -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style> 
+            .navbar-default .navbar-nav > li > a,.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
+                color: orange;
+             }
+            .carousel{
+              min-height: 20%;
+              min-width: 80%;
+            }
+            header{
+                height: 50%;
+            }
+            .pics{
+                margin:auto;
+                width:70%;               
+            }
+            #LeftColumn{
+                border-radius: 25px;
+                border: 2px solid black;
+                padding: 20px;
+                width: 400px;
+                text-align: center;
+            }
+            body{
+                background-color: lightgrey;   
+                height:50%;
+            }
+
+            #tabs{
+/*                background-color: #66FF99;*/
+            }
+            #myCarousel { 
+              height: 100%;
+            }
+            
+        </style>
+        </head>
+    <body>
+
+            
+        <!--Starting the navigation bar-->
+        <nav class="navigationcustom navbar navbar-default  navbar-inverse navbar-static-top" role="navigation">
+            <!--The site title-->
+            <div class="navbar-header">
+                <!--Change this to an image instead of just a link with text-->
+                <a href="index.html" class="navbar-brand">TomaHack!</a>    
+            </div>
+            <!--Now for the other navigation links-->          
+            <ul class="nav navbar-nav customList navbar-right">
+                
+                <li class="active"><a href="#">About TomaHack!</a></li>    
+                <li style="color: steelblue"><a href="#">Get in touch</a></li>  
+                <li class="activeno"><a href="#">Projects</a></li>  
+                <li class="activeno"><a href="#">Business Inquiry    </a></li>  
+                
+    
+            </ul>
+        </nav>
+        <!--Ending the navigation bar-->
+        
+        <!--New image slider!!!-->
+        
+        <div  class="container" >
+            <div  id= "personalCarousel" class = "carousel slide" data-ride="carousel" >
+            
+           <!--The indicators on the bottom of the slider--> 
+            <ol class= "carousel-indicators">
+                <li data-target="#personalCarousel" data-slide-to="0"  class="active"></li>
+                <li data-target="#personalCarousel" data-slide-to="1"  ></li>
+                <li data-target="#personalCarousel" data-slide-to="2"  ></li>
+                <li data-target="#personalCarousel" data-slide-to="3"  ></li>
+                <li data-target="#personalCarousel" data-slide-to="4"  ></li>                
+            </ol>
+            
+           <!--The images list-->
+           <div class="carousel-inner">
+               <div class="item">
+                   <img src="{% static "images/writers-desk-with-cappuccino.jpg" %}" alt="computer" />
+                   <div class="carousel-caption">
+                       <h1 style="padding: 0px 0px 90px 0px" >The caption! </h1>
+                   </div>
+               </div>
+               
+               <div class="item active">
+                   <img src="Images/Eureka.jpg" alt="Eureka" />
+                   <div class="carousel-caption">
+                       <h1>This is TomaHack! </h1>
+                   </div>
+               </div>
+               
+<!--               <div class="item ">
+                     <div class="jumbotron">
+            <h3 style="font-style: italic; text-align: center"> Welcome to TomaHack</h3>
+            <h4 style="font-style: italic; text-align: center" id="catchPhrase"> Software Solutions For Your Business</h4>
+            <button id="jumbotronButton" onClick="moveChatchPhrase()">Push to stop</button>
+        `              </div>
+               </div>-->
+               
+               <div class="item ">
+                   <img src="Images/ToTheSky.png" alt="To the sky!!!" />
+                   <div class="carousel-caption">
+                       <h1>The caption! </h1>
+                   </div>
+               </div>
+               
+               <div class="item ">
+                   <img src="Images/violetlights.jpg" alt="These are the violet lights" />
+                   <div class="carousel-caption">
+                       <h1>The caption! </h1>
+                   </div>
+               </div>
+               
+           </div>
+           
+           <!--The side buttons-->
+           <a class="left carousel-control" href="#personalCarousel" data-slide="prev">
+               <span class="icon-prev"> </span>
+           </a>
+           
+           <a class="right carousel-control" href="#personalCarousel" data-slide="next">
+           <span class="icon-next"> </span>
+           </a>
+           <!--End of the carousel-->
+             </div>
+           <!--End of the container of the carousel-->
+        </div>
+        
+         <!-- The three columns that lead to other links on the webpage-->           
+            <!--One Row with Three Columns--> 
+            <br>
+            <br>
+         <div class="row"> 
+             <div class="col-sm-4"><div id="LeftColumn"><h2 >Lorem Ipsum</h2><p> Some More Lorem Ipsum! </p><button type="button" style="background-color: orange; border-color: black;" class="btn btn-default" >Get Started!</button> </div>
+                 
+             </div>
+             
+             <div class="col-sm-4"><div id="LeftColumn"><h2 >Lorem Ipsum</h2><p> Some More Lorem Ipsum! </p><button type="button" style="background-color: orange; border-color: black;" class="btn btn-default" >Get Started!</button> </div>
+                 
+             </div>
+             
+             <div class="col-sm-4"><div id="LeftColumn"><h2 >Lorem Ipsum</h2><p> Some More Lorem Ipsum! </p><button type="button" style="background-color: orange; border-color: black;" class="btn btn-default" >Get Started!</button> </div>
+                 
+             </div>
+             
+         </div>
+            <br>
+        <div style="border-color: green" class> <p>
+                <br>
+                <br>
+            <h1 style="color: darkorange"> About Us! </h1>
+                
+                TomaHack, founded by an electrical engineering student at Temple University, is a one stop shop for your business's needs.
+            To cut to the chase, a representative talks to you about what kinds of utilities and software you would like to use for 
+            your small business or comapany. Then the representative talks pricing and delivery with the software team before following 
+            up with the client. Our company aims to use the currently popular software development methodology known as agile development
+            with our own twists. Basically, we want to work with the client to get software that they will actually want . At times, 
+            software devs can have different visions than the client despite the initial planning phases and therefore at TomaHack, we want
+            to bug you on a frequent basis about the progess of development and God Willing, get presentable software to yourself for demos
+            during the project. </p>
+        </div>
+            <p style="border-color: green" class="col"> TomaHack, founded by an electrical engineering student at Temple University, is a one stop shop for your business's needs.
+            To cut to the chase, a representative talks to you about what kinds of utilities and software you would like to use for 
+            your small business or comapany. Then the representative talks pricing and delivery with the software team before following 
+            up with the client. Our company aims to use the currently popular software development methodology known as agile development
+            with our own twists. Basically, we want to work with the client to get software that they will actually want . At times, 
+            software devs can have different visions than the client despite the initial planning phases and therefore at TomaHack, we want
+            to bug you on a frequent basis about the progess of development and God Willing, get presentable software to yourself for demos
+            during the project.<a href="/rango/">Back to rango/$ or /$</a> </p>
+        
+        <img src="{% static "images/writers-desk-with-cappuccino.jpg" %}" alt="computer" />
+        
+        </body>
+    
+    
+</html>
